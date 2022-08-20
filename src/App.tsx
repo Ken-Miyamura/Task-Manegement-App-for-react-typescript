@@ -7,13 +7,13 @@ import { Todo } from './models/models';
 const App: React.FC = () => {
 
   const [todo, setTodo] = useState<string>("");
-  const [todos, settodos] = useState<Todo[]>([]);
+  const [todos, setTodos] = useState<Todo[]>([]);
 
   const handleAdd = (e: React.FormEvent) => {
     e.preventDefault();
 
     if (todo) {
-      settodos([...todos, {id: Date.now(), name: todo, isDone: false}]);
+      setTodos([...todos, {id: Date.now(), name: todo, isDone: false}]);
       setTodo("");
     };
   };
@@ -22,10 +22,7 @@ const App: React.FC = () => {
     <div className="App">
       <span className="heading text-gray-600 font-neucha">Taskify</span>
       <InputField todo={todo} setTodo={setTodo} handleAdd={handleAdd}/>
-      {todos.map((todo) => (
-        <li key={todo.id}>{todo.name}</li>
-      ))}
-      {/* <TodoList /> */}
+      <TodoList todos={todos} setTodos={setTodos} />
     </div>
   )
 }
