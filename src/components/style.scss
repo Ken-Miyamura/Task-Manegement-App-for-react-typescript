@@ -50,57 +50,62 @@
     margin-top: 10px;
     justify-content: space-between;
     align-items: flex-start;
-}
 
-.todos {
-    border-radius: 5px;
-    display: flex;
-    flex-direction: column;
-    width: 47.5%;
-    padding: 15px;
-    background-color: rgb(50, 195, 205);
-
-    &__heading {
-        font-size: 30px;
-        color: #fff;
-    }
-
-    &__single {
-        display: flex;
+    .todos {
         border-radius: 5px;
-        padding: 20px;
-        margin-top: 15px;
-        background-image: url("https://img.freepik.com/free-photo/crumpled-yellow-paper-background-close-up_60487-2390.jpg?size=626&ext=jpg");
-        transition: 0.2s;
-
-        &:hover {
-            box-shadow: 0 0 5px black;
-            transform: scale(1.03);
+        display: flex;
+        flex-direction: column;
+        width: 47.5%;
+        padding: 15px;
+        background-color: rgb(50, 195, 205);
+    
+        &__heading {
+            font-size: 30px;
+            color: #fff;
         }
-
-        &--text {
-            flex: 1;
-            padding: 5px;
-            border: none;
-            font-size: 20px;
-
-            &:focus {
-                outline: none;
+    
+        &__single {
+            display: flex;
+            border-radius: 5px;
+            padding: 20px;
+            margin-top: 15px;
+            background-image: url("https://img.freepik.com/free-photo/crumpled-yellow-paper-background-close-up_60487-2390.jpg?size=626&ext=jpg");
+            transition: 0.2s;
+    
+            &:hover {
+                box-shadow: 0 0 5px black;
+                transform: scale(1.03);
+            }
+    
+            &--text {
+                flex: 1;
+                padding: 5px;
+                border: none;
+                font-size: 20px;
+                word-break: break-word;
+    
+                &:focus {
+                    outline: none;
+                }
             }
         }
+
+        .drag {
+            box-shadow: 0 0 20px black;
+        }
     }
-}
 
-.dragactive {
-    background-color: rgb(0, 221, 236);
-}
-
-.dragcomplete {
-    background-color: rgb(255, 38, 0);
-}
-
-.remove {
-background-color: rgb(235, 103, 80);
+    .drag-active {
+        background-color: rgb(0, 221, 236);
+    }
+    
+    .drag-complete {
+        background-color: rgb(255, 38, 0);
+    }
+    
+    .remove {
+    background-color: rgb(235, 103, 80);
+    }
 }
 
 .icon {
