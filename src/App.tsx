@@ -27,7 +27,7 @@ const App: React.FC = () => {
 
     if (destination.droppableId === source.droppableId && destination.index === source.index) return;
     
-    let add;
+    let add: Todo;
     // todosのコピー
     const active = [...todos];
     // comcompleteTodosのコピー
